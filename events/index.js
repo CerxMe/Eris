@@ -1,6 +1,6 @@
-const reqEvent = (event) => require(`./events/${event}`)
+const reqEvent = (event) => require(`./${event}`)
 module.exports = client => {
-  // When the bot is connected to discord and ready to uperate
+  // When the bot is connected to discord and ready to operate
   client.on('ready', () => reqEvent('ready')(client))
 
   // Everytime new message shows up

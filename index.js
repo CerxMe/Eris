@@ -1,28 +1,22 @@
-const fs = require('fs')
 const Discord = require('discord.js')
 
 const client = new Discord.Client()
 
-// Define custom data container
+// Define custom data container in the client thingy
 client.eris = new Discord.Collection()
 
 // Import configuration
 client.eris.config = require('./config.json')
 
-// Load Commands
-client.eris.commands = new Discord.Collection()
-console.log(client.eris)
+// Database connection
+require('./db.js')(client)
 
-const commandFiles = fs.readdirSync('./commands')
+// Dynamically load Commands
+require('./commands')(client, Discord)
 
-for (const file of commandFiles) {
-  const command = require(`./commands/${file}`)
-  console.log(`Initializing ${file}`)
-  client.eris.commands.set(command.name, command)
-}
-
-// Register Events
-require('./eventLoader.js')(client)
+// Event handler
+//  - New events need to be registered in ./events/index.js
+require('./events')(client)
 
 // Login to Discord
 client.login(client.eris.config.token)
