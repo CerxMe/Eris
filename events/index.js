@@ -1,8 +1,17 @@
 const reqEvent = (event) => require(`./${event}`)
+
 module.exports = client => {
-  // When the bot is connected to discord and ready to operate
+  /*
+   *  Register any new event hooks in here!
+   */
+
+  // ready.js
   client.on('ready', () => reqEvent('ready')(client))
 
-  // Everytime new message shows up
-  client.on('message', message => reqEvent('message')(client, message))
+  // message.js
+  client.on('message', message => reqEvent('message/message')(client, message))
+
+  // guildMemberAdd.js
+  client.on('guildMemberAdd', member => reqEvent('guildMemberAdd')(client, member))
+  client.on('guildBanAdd', (guild, member) => reqEvent('guildBanAdd')(client, guild, member))
 }
