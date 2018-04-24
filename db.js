@@ -1,8 +1,13 @@
+/*
+ * Initilizes a database connection with Mongorito
+ * - add all models to client.eris.models!
+ * - configure database server to keep connections alive
+ */
+
 const {Database, Model} = require('mongorito')
 module.exports = client => {
   client.eris.db = new Database(client.eris.config.mongourl)
-  class Member extends Model {}
-  client.eris.db.register(Member)
+
   client.eris.db.connect()
       .then(
           () => console.log('Database connected')
@@ -10,4 +15,9 @@ module.exports = client => {
       .catch(
           e => console.error(`Database goofed: ${e}`)
       )
+  client.eris.models = []
+
+  class Member extends Model {}
+  client.eris.models.Member = Member
+  client.eris.db.register(Member)
 }

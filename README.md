@@ -1,31 +1,53 @@
 # Eris
-The ultimate [Elkia](https://elkia.life) automation, fun and housekeeping maid.
+The ultimate automation, fun and housekeeping maid of [Elkia](https://elkia.life).
 
-*Eris is just an interface for manipulating and displaying some of the elkia data from Atlas. She won't work just by her own.*
+Eris is just an interface for manipulating and displaying some of the Elkia data from Atlas.  She won't be useful just by her own. [Search my repositories for ElkiaEssentials](https://github.com/CerxMe?tab=repositories&q=ElkiaEssentials) to see the complete set!
+
+**If you're looking for the code of Eris's treasury hunt**, *A text-based, "Duck Hunt" type minigame* - **the 2018 Elkia April Fools prank** which occured on our Discord server, it's up on [pastebin](https://pastebin.com/PD2mhZni).
+Note: this was written literally last minute, I didn't set up git, everything is rushed and the code got edited on-the-fly. Some parts might be missing.
 
 ---
 
->ES6, MongoDB, no models, no schemas, no tests - fuck that shit, ain't nobody got time for that.
+## About this project
 
-## Running
+This project is dependent upon [Hephaestus](https://github.com/CerxMe/Hephaestus)
+>ES6, MongoDB, no schemas, no tests - fuck that shit, ain't nobody got time for that.
+
+### Current Features
+
+- Sync guild members with Atlas
+    - Posts a notification about important changes in #logs channel
+    - Keep a record in database after a member leaves to help identify returning members.
+- TODO: Account creation
+    - TODO: Link a Minecraft account with your Discord
+    - TODO: Whitelist members on Elkia
+- Separate lastseen tracking for Discord activity
+    - TODO: based off online status
+    - last message
+
+### Running
 
 Requires Node 8 and a MongoDB server.
 
-- Navigate into the folder, run `npm install` to get libraries.
-- While that's going on, edit the *config.example.json* (To yet be provided)
+- Navigate into the root folder, run `npm install` to get dependencies.
+- While that's going on, edit the *config.example.json*
 - Remove all the comments in *config.example.json* telling you what goes where - as json doesn't support comments. If you're using any semi-decent IDE it should've been screaming at you ever since you opened it.
-- Finally rename  *config.example.json* to simply *config.json*
-- Run with `node index.js` (Run script to yet be provided)
+- Rename *config.example.json* to *config.json*
+- Run with `npm start` (Updates [Hephaestus](https://github.com/CerxMe/Hephaestus) and runs index.js)
 
-## Contributing
+### Contributing
 
 As this is a personal project quite heavily targeted at very specific audience, I don't really feel like fucking with other people's code.
 Unless I told you to add some shit, consider your commit rejected.
 
-## License
+### License
 
 I'm not a fan on licenses, so there's none. All of this is released into the public domain. Use this code as you please, fork it, print it, sell it, burn it - I don't care.
-No need to credit me or anything, would be nice tho.
+
+### Forking
+
+This project is dependent upon [Hephaestus](https://github.com/CerxMe/Hephaestus) - a toolset I'm developing to ease the development, maintain clean code and avoid repeating myself.
+If you don't want to deal with that getting updated, I'd suggest forking that repository as well and editing dependencies in *package.json* to point towards your copy.
 
 ----
-*Contact Cerx#2986 on Discord for any additional info, or - you know - [create an issue](https://github.com/CerxMe/Eris/issues).*
+*Contact Cerx#2986 on Discord for any additional info, or - you know - just [create an issue](https://github.com/CerxMe/Eris/issues).*

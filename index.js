@@ -1,5 +1,10 @@
-const Discord = require('discord.js')
+/*
+ *  Main entry point
+ *  - load all the stuff
+ *  - initialize a Discord client
+ */
 
+const Discord = require('discord.js')
 const client = new Discord.Client()
 
 // Define custom data container in the client thingy

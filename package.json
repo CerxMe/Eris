@@ -1,16 +1,26 @@
 {
   "name": "eris",
   "version": "1.0.0",
-  "description": "",
+  "description": "The ultimate [Elkia](https://elkia.life) automation, fun and housekeeping maid.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No tests\" && exit 1"
+    "start": "npm update CerxMe/Hephaestus && node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "hephaestus": "github:CerxMe/Hephaestus",
     "mongorito": "^3.0.4",
     "node-schedule": "^1.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CerxMe/Eris.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CerxMe/Eris/issues"
+  },
+  "homepage": "https://github.com/CerxMe/Eris#readme"
 }

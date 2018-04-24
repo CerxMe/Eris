@@ -32,3 +32,5 @@ node_modules
 
 # Confidential
 config.json
+package-lock.json
+avatar.png
