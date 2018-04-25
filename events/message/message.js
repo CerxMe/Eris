@@ -3,8 +3,10 @@
  */
 
 module.exports = (client, message) => {
+  // Ignore Direct Messages
+  if (message.channel.type !== 'text') return
 
-  require('./messageLog')(client, message)
+  require('./messageCounter')(client, message)
 
   const prefix = client.eris.config.prefix
 
@@ -20,7 +22,7 @@ module.exports = (client, message) => {
   if (!client.eris.commands.has(command)) return
 
   try {
-    client.eris.commands.get(command).execute(message, args)
+    client.eris.commands.get(command).execute(client, message, args)
   } catch (error) {
     console.error(error)
     message.reply('there was an error trying to execute that command!')

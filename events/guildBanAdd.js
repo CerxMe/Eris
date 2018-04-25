@@ -18,8 +18,7 @@ module.exports = async (client, guild, user) => {
       .setAuthor(`${user.tag}`, user.displayAvatarURL)
       .setColor(0x000)
       .setTimestamp()
-      .setDescription(`The Ban hammer has spoken! ${user.displayName} is now banned.`)
-      .addField('Discord ID', user.id)
+      .setDescription(`The Ban hammer has spoken! ${user} is now banned.`)
 
   client.channels.get(client.eris.config.guild.channels.logs).send('', logMessage)
 }

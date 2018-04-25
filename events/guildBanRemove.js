@@ -1,5 +1,5 @@
 /*
- * Emitted whenever someone gets banned
+ * Emitted whenever someone gets unbanned
  */
 
 const Discord = require('discord.js')
@@ -16,9 +16,9 @@ module.exports = async (client, guild, user) => {
 
   let logMessage = new Discord.RichEmbed()
       .setAuthor(`${user.tag}`, user.displayAvatarURL)
-      .setColor(0xFFF)
+      .setColor(0xCDCDC3)
       .setTimestamp()
-      .setDescription(`The Ban hammer regrets it's actions. ${user.displayName} got un banned.`)
+      .setDescription(`The Ban hammer regrets it's actions. ${user} got unbanned.`)
 
   client.channels.get(client.eris.config.guild.channels.logs).send('', logMessage)
 }

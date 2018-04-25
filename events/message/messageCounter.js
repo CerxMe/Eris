@@ -9,7 +9,7 @@ module.exports = async (client, message) => {
 
   // Member needs to have a record in the database
   if (member !== null) {
-    let totalMessages = member.get('discord.messages.total') === null ? 1 : member.get('discord.messages.total') + 1
+    let totalMessages = member.get('discord.messages.total') === null || isNaN(member.get('discord.messages.total')) ? 1 : member.get('discord.messages.total') + 1
 
     member.set('discord.messages', {
       total: totalMessages,
