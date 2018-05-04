@@ -40,6 +40,15 @@ Requires Node 8 and a MongoDB server.
 As this is a personal project quite heavily targeted at very specific audience, I don't really feel like fucking with other people's code.
 Unless I told you to add some shit, consider your commit rejected.
 
+### File structure
+Should be pretty self-explanatory
+
+**commands/**
+Commands that get executed upon user input
+
+**messages/**
+Includes json files containing shit Eris says
+
 ### License
 
 I'm not a fan on licenses, so there's none. All of this is released into the public domain. Use this code as you please, fork it, print it, sell it, burn it - I don't care.

@@ -16,6 +16,7 @@ module.exports = async (client, guildMember) => {
 
     member = new MemberCollection(
       {
+        createdAt: new Date(),
         status: 'newbie',
         discord: {
           id: guildMember.id,

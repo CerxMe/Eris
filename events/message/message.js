@@ -6,7 +6,7 @@ module.exports = (client, message) => {
   // Ignore Direct Messages
   if (message.channel.type !== 'text') return
 
-  require('./messageCounter')(client, message)
+  require('./messageCounter')(message)
 
   const prefix = client.eris.config.prefix
 
@@ -17,12 +17,15 @@ module.exports = (client, message) => {
   if (client.eris.config.devmode && message.channel.id !== client.eris.config.guild.channels.devtest) return
 
   const args = message.content.slice(prefix.length).split(/ +/)
-  const command = args.shift().toLowerCase()
+  const commandName = args.shift().toLowerCase()
 
-  if (!client.eris.commands.has(command)) return
+  const command = client.eris.commands.get(commandName) ||
+      client.eris.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
+
+  if (!command) return
 
   try {
-    client.eris.commands.get(command).execute(client, message, args)
+    command.execute(message, args)
   } catch (error) {
     console.error(error)
     message.reply('there was an error trying to execute that command!')

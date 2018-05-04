@@ -16,6 +16,9 @@ client.eris.config = require('./config.json')
 // Database connection
 require('./db.js')(client)
 
+// Dynamically load string messages
+require('./messages')(client, Discord)
+
 // Dynamically load Commands
 require('./commands')(client, Discord)
 

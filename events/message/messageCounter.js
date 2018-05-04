@@ -2,8 +2,8 @@
  * Message logger & counter
  */
 
-module.exports = async (client, message) => {
-  const MemberCollection = client.eris.models.Member
+module.exports = async (message) => {
+  const MemberCollection = message.client.eris.models.Member
 
   let member = await MemberCollection.findOne({'discord.id': message.author.id})
 

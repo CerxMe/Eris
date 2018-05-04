@@ -1,0 +1,9 @@
+{
+  "new": [
+    "I've created an account for you, does that make me an Accountant?",
+    "You've successfuly subscribed to **Cat Facts 101**, your account will be charged soon."
+  ],
+  "existing": [
+    "Account already exists"
+  ]
+}
