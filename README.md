@@ -17,7 +17,11 @@ This project is dependent upon [Hephaestus](https://github.com/CerxMe/Hephaestus
 
 - Sync guild members with Atlas
     - Posts a notification about important changes in #logs channel
+    
+    ![Logging Example](https://i.imgur.com/ebJUfTB.png)
     - Keep a record in database after a member leaves to help identify returning members.
+    
+    ![Database Record](https://i.imgur.com/DeFUBnq.png)
 - TODO: Account creation
     - TODO: Link a Minecraft account with your Discord
     - TODO: Whitelist members on Elkia
