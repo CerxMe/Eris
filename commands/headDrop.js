@@ -19,7 +19,7 @@ module.exports = {
 
     // Get a random UUID to ensure player's skin doesn't change.
       const randomUUID = await uuidv4()
-      const cmdString3 = '```' + `execute as @a[name=${name},scores={headDeath=1..}] run give @a[scores={headKill=1..}] player_head{display:{Name:"{"translate":"${name}'s Head","italic":false}",SkullOwner:{Id:"${randomUUID}",Properties:{textures:[{Value:"${userValue}"}]}}} 1` + '```'
+      const cmdString3 = '```' + `execute as @a[name=${name},scores={headDeath=1..}] run give @a[scores={headKill=1..}] player_head{display:{Name:"{"translate":"${name}'s Head","italic":false"},SkullOwner:{Id:"${randomUUID}",Properties:{textures:[{Value:"${userValue}"}]}}} 1` + '```'
 
       let logMessage = new Discord.RichEmbed()
             .setTitle(name + '\'s Head Command')
