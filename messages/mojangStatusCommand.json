@@ -1,0 +1,15 @@
+{
+  "green": [
+    "All Mojang services are opreational",
+    "It's all Gucci. *Gucci gang, Gucci gang, Gucci gang, Gucci gang.*"
+  ],
+  "yellow": [
+    "Some Mojang services might be partially operational"
+  ],
+  "red": [
+    "Some services are not responding at all"
+  ],
+  "error": [
+    "The service status checker must be down"
+  ]
+}
