@@ -1,0 +1,11 @@
+{
+  "okay": [
+    "I have gathered some information for you!",
+	"So are you stalking this guy or what?",
+	"Why do you need so much information?"
+  ],
+  "error": [
+    "This person is actually a ghost!",
+	"No info found!"
+  ]
+}
