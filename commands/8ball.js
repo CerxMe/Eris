@@ -6,7 +6,6 @@ module.exports = {
   aliases: ['ask','q'],
   async execute (message, args) {
     try{
-
       if (!args[0]) {
           const logMessage = new Discord.RichEmbed()
               .setColor(0x00e6e6)
