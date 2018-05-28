@@ -20,4 +20,8 @@ module.exports = client => {
   class Member extends Model {}
   client.eris.models.Member = Member
   client.eris.db.register(Member)
+
+  class ReactionStats extends Model {}
+  client.eris.models.ReactionStats = ReactionStats
+  client.eris.db.register(ReactionStats)
 }
