@@ -39,6 +39,10 @@
     {
       "triggers"  :  ["eh", "sorry"],
       "emoji" :  "canada"
+    },
+    {
+      "triggers"  :  ["iron"],
+      "emoji" :  "iron"
     }
   ]
 }
