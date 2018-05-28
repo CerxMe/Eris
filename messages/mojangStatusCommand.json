@@ -1,15 +1,19 @@
 {
   "green": [
     "All Mojang services are opreational",
-    "It's all Gucci. *Gucci gang, Gucci gang, Gucci gang, Gucci gang.*"
+    "It's all Gucci. *Gucci gang, Gucci gang, Gucci gang, Gucci gang.*",
+	"Surprisingly, no issues in sight!"
   ],
   "yellow": [
-    "Some Mojang services might be partially operational"
+    "Some Mojang services might be partially operational",
+	"I think a couple of these thingies aren't working properly"
   ],
   "red": [
-    "Some services are not responding at all"
+    "Some services are not responding at all",
+	"Some of these have gone haywire!"
   ],
   "error": [
-    "The service status checker must be down"
+    "The service status checker must be down",
+	"I can't find any of these things, maybe the 'find things' service is down?"
   ]
 }
