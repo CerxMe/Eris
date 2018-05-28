@@ -1,0 +1,44 @@
+{
+  "map": [
+    {
+      "triggers"  :  ["elkia"],
+      "emoji" :  "elkiaTM"
+    },
+    {
+      "triggers"  :  ["tommin", "137614748169535488"],
+      "emoji" :  "flashbolt"
+    },
+    {
+      "triggers"  :  ["cerx", "serx", "81408444879339520"],
+      "emoji" :  "cerx"
+    },
+    {
+      "triggers"  :  ["hipster"],
+      "emoji" :  "hipster"
+    },
+    {
+      "triggers"  :  ["brockle", "106943061476519936"],
+      "emoji" :  "broccoli"
+    },
+    {
+      "triggers"  :  ["cao", "188353383516602378"],
+      "emoji" :  "penguin"
+    },
+    {
+      "triggers"  :  ["wylker", "206514809498370050"],
+      "emoji" :  "honk"
+    },
+    {
+      "triggers"  :  ["anubis", "136962804841185280"],
+      "emoji" :  "batmoji"
+    },
+    {
+      "triggers"  :  ["lemur", "ham", "306947044516560896"],
+      "emoji" :  "ham"
+    },
+    {
+      "triggers"  :  ["eh", "sorry"],
+      "emoji" :  "canada"
+    }
+  ]
+}

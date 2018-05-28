@@ -7,6 +7,7 @@ module.exports = (client, message) => {
   if (message.channel.type !== 'text') return
 
   require('./messageCounter')(message)
+  require('./reactions')(message)
 
   const prefix = client.eris.config.prefix
 
@@ -28,6 +29,6 @@ module.exports = (client, message) => {
     command.execute(message, args)
   } catch (error) {
     console.error(error)
-    message.reply('there was an error trying to execute that command!')
+    message.reply('There was an error trying to execute that command!')
   }
 }
