@@ -1,0 +1,20 @@
+{
+  "true": [
+    "Server stats, comin' right up!",
+    "Found some of those stats you were talking about!",
+    "Will these do?",
+    "You tryin' to spy on us, or something?",
+    "I'm gonna tell Cao you're spying again!",
+    "Yup, server is fine, I think...",
+    "Hmmm, interesting choice of command..."
+  ],
+  "false": [
+    "Quick! Somebody fetch an Admin!",
+	"I bet Cerx was involved.",
+    ":blamecao:",
+    "Server is currently offline!"
+  ],
+  "error": [
+    "Error occurred!"
+  ]
+}
