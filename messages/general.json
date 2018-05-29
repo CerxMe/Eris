@@ -2,5 +2,9 @@
   "delivery": [
     "Here you go:",
     "Here's what I can see:"
+  ],
+  "error": [
+    "Whoopsie",
+    "Oh no"
   ]
 }
