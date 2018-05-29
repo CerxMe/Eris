@@ -21,15 +21,12 @@ module.exports = {
 
       // Find server Status
       response = await request(`https://mcapi.us/server/status?ip=${serverip}`)
-      const serverstatus = JSON.parse(response.body)
-      let outputOnline
-      let outputPlayers
-      if (serverstatus['online']) {
+      const {online, players, server, last_updated} = JSON.parse(response.body)
+      let outputOnline, outputLastOnline
+      if (online) {
         outputOnline = ":white_check_mark: Online"
-        outputPlayers = `${serverstatus['players']['now']} / ${serverstatus['players']['max']}`
       } else {
         outputOnline = ":x: Offline"
-        outputPlayers = "0 / 0"
       }
 
       // Output
@@ -37,9 +34,10 @@ module.exports = {
         .setTitle(outputName)
         .setThumbnail(outputIcon)
         .setColor(0x00AAAA)
-        .setDescription(`Status: ${outputOnline}\nPlayers: ${outputPlayers}`)
+        .setDescription(`Status: ${outputOnline}\nPlayers: ${players.now} / ${players.max}\nVersion: ${server.name}`)
+        .setFooter(`Last Checked: ${moment(Number(last_updated) * 1000).startOf('second').fromNow()}`)
 
-      message.channel.send(message.client.eris.getRandomMessage('serverStatusCommand', serverstatus['online']), logMessage)
+      message.channel.send(message.client.eris.getRandomMessage('serverStatusCommand', online), logMessage)
     } catch (e) {
       let logMessage = new Discord.RichEmbed()
         .setTitle('Server Status Error:')
