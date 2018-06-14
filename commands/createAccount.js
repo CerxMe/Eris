@@ -26,7 +26,7 @@ module.exports = {
 
       let logMessage = new Discord.RichEmbed()
           .setAuthor(`${guildMember.user.tag}`, guildMember.user.displayAvatarURL)
-          .setColor(0x7473B3)
+          .setColor(message.client.eris.config.responseColors.positiveResponse)
           .setDescription(`New account creation`)
           .addField(`Account ID`, member.get('_id'), true)
           .addField(`Discord ID`, member.get('discord.id'), true)

@@ -1,0 +1,27 @@
+Simple style guidelines for Eris bot.
+
+** EMBED RESPONSE COLORS **
+
+Positive command response message
+eg. default Eris reaponses
+0x00AAAA
+
+
+Error command response message
+eg. command failed, wrong args entered
+0xAA00AA
+
+
+General information response message
+eg. seed/spawn/server time messages. simple one bit of info response.
+0x7473B3
+
+
+
+** JAVASCRIPT THINGS **
+
+use 'Const' and 'let' instead of 'var'
+
+don't use semicolon - cerx will shout
+
+Use 2 spaces to indent

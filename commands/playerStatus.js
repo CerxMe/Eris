@@ -38,7 +38,7 @@ module.exports = {
             .setFooter(`Skin Download: https://visage.surgeplay.com/skin/512/${name}.png`, `https://visage.surgeplay.com/face/512/${name}.png`)
             .setThumbnail(`https://visage.surgeplay.com/head/512/${name}.png`)
             .setImage(`https://visage.surgeplay.com/full/500/${name}.png`)
-            .setColor(0x00AAAA)
+            .setColor(message.client.eris.config.responseColors.positiveResponse)
             .addField("__***Username History:***__", names, false)
             .addField("__***Player Skin:***__", "Image:", false)
 
@@ -46,7 +46,7 @@ module.exports = {
     } catch (e) {
       let logMessage = new Discord.RichEmbed()
         .setTitle('Player info error:')
-        .setColor(0xAA00AA)
+        .setColor(message.client.eris.config.responseColors.errorResponse)
         .setDescription(e)
       message.channel.send(message.client.eris.getRandomMessage('playerInfoCommand', 'error'), logMessage)
     }

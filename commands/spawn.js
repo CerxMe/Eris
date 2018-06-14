@@ -10,8 +10,7 @@ module.exports = {
     let logMessage = new Discord.RichEmbed()
         .setTitle(':seedling: Elkia *Season III* World Spawn')
         .setDescription("Head yourself right towards 0,0")
-
-
+        .setColor(message.client.eris.config.responseColors.infoResponse)
     message.channel.send(message.client.eris.getRandomMessage('seedCommand', 'delivery'), logMessage)
   }
 }

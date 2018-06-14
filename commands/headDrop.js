@@ -24,7 +24,7 @@ module.exports = {
       let logMessage = new Discord.RichEmbed()
             .setTitle(name + '\'s Head Command')
             .setThumbnail('https://minotar.net/helm/' + name + '/100')
-            .setColor(0x00AAAA)
+            .setColor(message.client.eris.config.responseColors.positiveResponse)
             .setDescription(cmdString3)
 
       message.channel.send(message.client.eris.getRandomMessage('headDropCommand', 'okay'), logMessage)

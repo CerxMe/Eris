@@ -33,7 +33,7 @@ module.exports = {
       let logMessage = new Discord.RichEmbed()
         .setTitle(outputName)
         .setThumbnail(outputIcon)
-        .setColor(0x00AAAA)
+        .setColor(message.client.eris.config.responseColors.infoResponse)
         .setDescription(`Status: ${outputOnline}\nPlayers: ${players.now} / ${players.max}\nVersion: ${server.name}`)
         .setFooter(`Last Checked: ${moment(Number(last_updated) * 1000).startOf('second').fromNow()}`)
 
@@ -41,7 +41,7 @@ module.exports = {
     } catch (e) {
       let logMessage = new Discord.RichEmbed()
         .setTitle('Server Status Error:')
-        .setColor(0xAA00AA)
+        .setColor(message.client.eris.config.responseColors.errorResponse)
         .setDescription(e)
       message.channel.send(message.client.eris.getRandomMessage('serverStatusCommand', 'error'), logMessage)
     }

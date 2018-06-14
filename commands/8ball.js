@@ -8,14 +8,14 @@ module.exports = {
     try{
       if (!args[0]) {
           const logMessage = new Discord.RichEmbed()
-              .setColor(0x00e6e6)
+              .setColor(message.client.eris.config.responseColors.errorResponse)
               .setDescription("You forgot to ask your question.. Try again with ?8ball [question]")
           message.channel.send(logMessage);
       } else {
         let AnswerMessage = message.client.eris.getRandomMessage('8ballCommand', 'okay')
         let logMessage = new Discord.RichEmbed()
               .setTitle("8Ball Response")
-              .setColor(0x00AAAA)
+              .setColor(message.client.eris.config.responseColors.positiveResponse)
               .setDescription(AnswerMessage)
 
               message.channel.send(logMessage);
@@ -23,7 +23,7 @@ module.exports = {
     }catch (e) {
       let logMessage = new Discord.RichEmbed()
         .setTitle("Can't Answer Question")
-        .setColor(0xAA00AA)
+        .setColor(message.client.eris.config.responseColors.errorResponse)
         .setDescription(e)
       message.channel.send(message.client.eris.getRandomMessage('8ballCommand', 'error'), logMessage)
     }

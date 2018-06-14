@@ -48,14 +48,14 @@ module.exports = {
       // Output
       let logMessage = new Discord.RichEmbed()
         .setTitle('Reaction Stats')
-        .setColor(0x00AAAA)
+        .setColor(message.client.eris.config.responseColors.positiveResponse)
         .setDescription(outputReact)
 
       message.channel.send(message.client.eris.getRandomMessage('general', 'delivery'), logMessage)
     } catch (e) {
       let logMessage = new Discord.RichEmbed()
         .setTitle('React Stats Error:')
-        .setColor(0xAA00AA)
+        .setColor(message.client.eris.config.responseColors.errorResponse)
         .setDescription(e)
       message.channel.send(message.client.eris.getRandomMessage('serverStatusCommand', 'error'), logMessage)
     }

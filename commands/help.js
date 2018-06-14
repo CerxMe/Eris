@@ -8,12 +8,12 @@ module.exports = {
     try {
       let logMessage = new Discord.RichEmbed()
         .setTitle("Help Section Will be Shown Here")
-        .setColor(0xAA00AA)
+        .setColor(message.client.eris.config.responseColors.infoResponse)
       message.channel.send(message.client.eris.getRandomMessage('general', 'delivery'), logMessage)
     } catch (e) {
       let logMessage = new Discord.RichEmbed()
         .setTitle("Can't show help")
-        .setColor(0xAA00AA)
+        .setColor(message.client.eris.config.responseColors.errorResponse)
         .setDescription(e)
       message.channel.send(message.client.eris.getRandomMessage('general', 'error'), logMessage)
     }

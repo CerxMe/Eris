@@ -16,7 +16,7 @@ module.exports = {
         .setTitle(':seedling: Elkia *Season III* World Seed')
         .setDescription(released ? `The seed was released *${when.humanize(true)}*.` : `The seed will be released *${when.humanize(true)}*.`)
         .setFooter(`Admin Consortium have decided to release the seed after several months into the season to encourage exploration and avoid ruining early game.`)
-
+        .setColor(message.client.eris.config.responseColors.infoResponse)
     if (released) {
       let seed = message.client.eris.config.seed.value
       logMessage.addField(`\`${seed}\``, '\u200B')
