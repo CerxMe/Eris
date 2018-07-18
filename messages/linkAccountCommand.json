@@ -1,0 +1,18 @@
+{
+  "requestConfirmed": [
+    "Initialize link sequence"
+  ],
+  "requestTimeout": [
+    "The link ran away"
+  ],
+  "errorMojang": [
+    "This is not my Mo-jo"
+  ],
+  "logsAutoaccepted": [
+    "This link was automatically accepted. No further action is needed."
+  ],
+  "logsConfirmationNeeded": [
+    "An admin might need to check a look and approve this link with !approvelink <Confirmation ID>",
+    "Use !approvelink <Confirmation ID> to approve this link request"
+  ]
+}

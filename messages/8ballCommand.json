@@ -25,5 +25,12 @@
   ],
   "error": [
     "Whoopsie"
+  ],
+  "responseTitle": [
+    "8Ball says:",
+    "8Ball response"
+  ],
+  "noQuestion": [
+    "You forgot to ask your question.. Try again with ?8ball [question]"
   ]
 }

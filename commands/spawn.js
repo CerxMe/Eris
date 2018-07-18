@@ -8,9 +8,10 @@ module.exports = {
   execute (message, args) {
 
     let logMessage = new Discord.RichEmbed()
-        .setTitle(':seedling: Elkia *Season III* World Spawn')
-        .setDescription("Head yourself right towards 0,0")
-        .setColor(message.client.eris.config.responseColors.infoResponse)
-    message.channel.send(message.client.eris.getRandomMessage('seedCommand', 'delivery'), logMessage)
+      .setTitle(':map:  The spawn Island')
+      .setDescription(message.client.eris.getRandomMessage('spawnCommand', 'description'))
+      .setFooter('Rough spawn town location - x: 250, z: 500')
+      .setColor(0x55ACEE)
+    message.channel.send(message.client.eris.getRandomMessage('spawnCommand', 'message'), logMessage)
   }
 }

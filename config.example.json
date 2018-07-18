@@ -1,0 +1,27 @@
+{
+  "devmode": true,
+  // Only accepts commands from the devtest channel
+  "token": "TOKEN TO USE FOR DISCORD",
+  "mongourl": "URL TO YOUR MONGODB DATABASE",
+  "prefix": "!",
+  // A required character(s) before the command
+  "guild": {
+    "id": "247684180895465472",
+    "channels": {
+      "devtest": "333039746634874890",
+      "announcements": "247852211898548225",
+      "logs": "247866500596236289"
+    }
+  },
+  "seed": {
+    "releaseDate": "2018-08-24",
+    "value": "12345"
+    // The actual seed to be displayed
+  },
+  "responseColors": {
+    // Colors for the embed messages
+    "positiveResponse": "0x337489",
+    "errorResponse": "0xDD1199",
+    "infoResponse": "0x33AA22"
+  }
+}

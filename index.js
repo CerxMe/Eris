@@ -26,5 +26,9 @@ require('./commands')(client, Discord)
 //  - New events need to be registered in ./events/index.js
 require('./events')(client)
 
+// Code utilities
+//  - New utils need to be added in ./utilities/index.js
+require('./utilities')(client)
+
 // Login to Discord
 client.login(client.eris.config.token)

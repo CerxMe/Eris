@@ -49,6 +49,6 @@ module.exports = async (message, testCase, stringToTest) => {
     }
   })
 
-  // Save the recored in the databse
+  // Save the recored data in the databse
   await reaction.save()
 }

@@ -24,4 +24,9 @@ module.exports = client => {
   class ReactionStats extends Model {}
   client.eris.models.ReactionStats = ReactionStats
   client.eris.db.register(ReactionStats)
+
+  class Pending extends Model {}
+
+  client.eris.models.ReactionStats = Pending
+  client.eris.db.register(Pending)
 }

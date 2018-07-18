@@ -21,6 +21,7 @@ module.exports = async (client, guildMember) => {
         discord: {
           id: guildMember.id,
           name: guildMember.displayName,
+          tag: guildMember.user.tag,
           joinedAt: guildMember.joinedAt,
           color: guildMember.displayHexColor,
           avatarURL: guildMember.user.displayAvatarURL
@@ -39,7 +40,7 @@ module.exports = async (client, guildMember) => {
       .setAuthor(`${guildMember.user.tag}`, guildMember.user.displayAvatarURL)
       .setColor(0x43B581)
       .setTimestamp()
-      .setDescription(member === null ? `${guildMember.user} just joined the guild! Go say hi to them in #new-guys!` : member.get('discord.abbandonedAt') === null ? `${guildMember.user} just **came back**! Give them a warm greetings in #new-guys!` : ` ${guildMember.user} just came back after **${moment.duration(member.get('discord.abbandonedAt') - new Date()).humanize()}**! Give them a warm greetings in #new-guys!`)
+    .setDescription(member !== null ? `${guildMember.user} just joined the guild! Go say hi to them in #new-guys!` : member.get('discord.abbandonedAt') !== null ? `${guildMember.user} just **came back**! Give them a warm greetings in #new-guys!` : ` ${guildMember.user} just came back after **${moment.duration(member.get('discord.abbandonedAt') - new Date()).humanize()}**! Give them a warm greetings in #new-guys!`)
 
   client.channels.get(client.eris.config.guild.channels.logs).send('', logMessage)
 }
